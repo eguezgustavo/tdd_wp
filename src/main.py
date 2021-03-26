@@ -9,5 +9,5 @@ def calculate_weekday_worked_hours(person_entry):
     #
     # for day, hours in zip(weekday, daily_details):
     #     if day in hours:
-            
+
     return 6
