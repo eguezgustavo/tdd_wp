@@ -1,4 +1,4 @@
-from main import calculate_weekday_worked_hours, work_log
+from main import calculate_weekday_worked_hours, work_log, parse_hours_by_day
 
 
 def test__calculate_weekday_worked_hours__returns_total_hours__given_a_person_entry():
@@ -25,3 +25,13 @@ def test__get_work_log__returns_day_and_time_frame():
     expected = ['MO10:00-12:00', 'TU10:00-12:00', 'TH01:00-03:00', 'SA14:00-18:00',
                 'SU20:00-21:00']
     assert time_frame_by_day == expected
+
+
+def test__parse_hours_by_day_given_a_string():
+    hours_by_day_string = 'MO10:00-12:00'
+
+    parsed_hours_by_day = parse_hours_by_day(hours_by_day_string)
+
+    expected = ('MO', 2)
+    assert parsed_hours_by_day == expected
+

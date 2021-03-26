@@ -15,3 +15,7 @@ def calculate_weekday_worked_hours(person_entry):
 
 def work_log(person_entry):
     return person_entry.split("=")[1].split(",")
+
+
+def parse_hours_by_day(hours_by_day_string):
+    pass
