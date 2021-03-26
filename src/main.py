@@ -11,3 +11,7 @@ def calculate_weekday_worked_hours(person_entry):
     #     if day in hours:
 
     return 6
+
+
+def work_log(person_entry):
+    return person_entry.split("=")[1].split(",")
