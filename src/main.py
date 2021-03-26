@@ -1,3 +1,5 @@
+import re
+
 def calculate_weekday_worked_hours(person_entry):
     # weekday = [
     #     'MO', 'TU', 'WE', 'TH', 'FR'
@@ -18,4 +20,6 @@ def work_log(person_entry):
 
 
 def parse_hours_by_day(hours_by_day_string):
-    pass
+    hour_regex = '[0-2][0-9]:[0-5][0-9]'
+    hours_by_day = re.findall(hour_regex, hours_by_day_string)
+    
