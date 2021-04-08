@@ -4,5 +4,4 @@ services:
     links:
       - db:db
   db:
-    init: true
     image: postgres:latest
