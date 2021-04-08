@@ -1,4 +1,5 @@
 from main import calculate_weekday_worked_hours, work_log, parse_hours_by_day
+from datetime import time
 
 
 def test__calculate_weekday_worked_hours__returns_total_hours__given_a_person_entry():
@@ -32,6 +33,7 @@ def test__parse_hours_by_day_given_a_string():
 
     parsed_hours_by_day = parse_hours_by_day(hours_by_day_string)
 
-    expected = ('MO', 2)
+    day_time = time(10,0)
+    expected = ('MO', day_time)
     assert parsed_hours_by_day == expected
 
